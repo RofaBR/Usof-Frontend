@@ -1,0 +1,119 @@
+.not-found-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-primary);
+    background-image:
+        radial-gradient(at 20% 30%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 80% 70%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: var(--space-3xl);
+}
+
+.not-found-content {
+    text-align: center;
+    max-width: 600px;
+    background: var(--color-bg-card);
+    backdrop-filter: var(--blur-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-4xl);
+    padding: var(--space-5xl) var(--space-4xl);
+    box-shadow: var(--shadow-card);
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: var(--font-weight-extrabold);
+    margin: 0;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: var(--space-lg);
+}
+
+.not-found-title {
+    color: var(--color-text-primary);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-semibold);
+    margin: 0 0 var(--space-2xl) 0;
+}
+
+.not-found-message {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    margin: 0 0 var(--space-4xl) 0;
+}
+
+.home-button {
+    display: inline-block;
+    padding: var(--space-lg) var(--space-4xl);
+    border: none;
+    border-radius: var(--radius-xl);
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-slow);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+.home-button:hover {
+    background: var(--gradient-primary-hover);
+    box-shadow: var(--shadow-glow-primary-hover);
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 6rem;
+    }
+
+    .not-found-title {
+        font-size: var(--text-2xl);
+    }
+
+    .not-found-message {
+        font-size: var(--text-base);
+    }
+
+    .not-found-content {
+        padding: var(--space-3xl) var(--space-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found-container {
+        padding: var(--space-lg);
+    }
+
+    .error-code {
+        font-size: 5rem;
+    }
+
+    .not-found-title {
+        font-size: var(--text-xl);
+    }
+
+    .not-found-message {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-3xl);
+    }
+
+    .not-found-content {
+        padding: var(--space-2xl) var(--space-xl);
+    }
+
+    .home-button {
+        padding: var(--space-md) var(--space-3xl);
+        font-size: var(--text-sm);
+    }
+}

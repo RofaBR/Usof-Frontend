@@ -1,0 +1,103 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  margin: var(--space-3xl) 0;
+}
+
+.pagination-button {
+  padding: var(--space-md) var(--space-xl);
+  background: rgba(28, 28, 40, 0.7);
+  backdrop-filter: var(--blur-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  transition: var(--transition-slow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: var(--gradient-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-primary-hover);
+}
+
+.pagination-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.page-numbers {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  background: rgba(28, 28, 40, 0.7);
+  backdrop-filter: var(--blur-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  transition: var(--transition-slow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-number:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--color-border-primary);
+  transform: translateY(-2px);
+}
+
+.page-number.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: var(--shadow-glow-primary-hover);
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  .pagination {
+    gap: var(--space-md);
+    margin: var(--space-2xl) 0;
+  }
+
+  .pagination-button {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
+  }
+
+  .page-number {
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .pagination-button {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--text-xs);
+  }
+
+  .page-number {
+    width: 32px;
+    height: 32px;
+    font-size: var(--text-xs);
+  }
+
+  .page-numbers {
+    gap: var(--space-xs);
+  }
+}

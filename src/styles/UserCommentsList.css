@@ -1,0 +1,42 @@
+.user-comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-comment-item {
+  padding: 1.25rem;
+  background: rgba(28, 28, 40, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.user-comment-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.comment-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.comment-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.comment-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.comment-date::before {
+  font-size: 0.9rem;
+}

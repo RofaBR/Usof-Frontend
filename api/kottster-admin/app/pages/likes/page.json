@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "type": "table",
+  "title": "Likes",
+  "hideInSidebar": false,
+  "config": {
+    "dataSource": "mysql_db_os9tjt",
+    "fetchStrategy": "databaseTable",
+    "table": "likes",
+    "allowedRoleIdsToDelete": [
+      "52da8f1b-7c1e-4838-9473-0d7ad2f84b3a"
+    ],
+    "allowedRoleIdsToInsert": [
+      "52da8f1b-7c1e-4838-9473-0d7ad2f84b3a"
+    ],
+    "allowedRoleIdsToUpdate": [
+      "52da8f1b-7c1e-4838-9473-0d7ad2f84b3a"
+    ]
+  }
+}
